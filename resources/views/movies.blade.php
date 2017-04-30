@@ -50,18 +50,4 @@
             </tfoot>
         </table>
     </section>
-
-    <footer class="footer">
-        <section>
-            <div class="footer">
-                <center>
-                    <div class="epilogue" style="padding-top:5em">
-                        <p class="copyright">Epic Movies PRO+ designed in the USA © 2017<br>
-                            Licensed under the <a href="http://www.datatables.net/mit">MIT license</a></p>
-                    </div>
-                </center>
-            </div>
-            <!-- /.footer -->
-        </section>
-    </footer>
 @stop
