@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/custom.datatables.styles.css">
 
     <script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" language="javascript" src="./js/pluralize.js"></script>
     <!-- dataTables js -->
     <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.14/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>

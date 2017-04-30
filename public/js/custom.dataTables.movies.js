@@ -40,11 +40,12 @@ $(document).ready(function() {
                     if ( type === 'display' || type === 'filter' ) {
                         mins = data % 60;
                         hours = Math.floor(data / 60);
+
                         if (hours > 0) {
-                            return hours + " hours " + mins + " minutes";
+                            return hours + " " + pluralize('hour', hours, true) + " " + mins + " " + pluralize('minute', mins, true);
                         }
                         else {
-                            return mins + " minutes";
+                            return mins + " " + pluralize('minute', mins, true);
                         }
                     }
                     else {
