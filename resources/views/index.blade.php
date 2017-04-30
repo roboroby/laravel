@@ -28,10 +28,4 @@
         </div>
     </div>
     <!-- /.row -->
-    <div class="row text-center">
-        <div style="padding-top:1em;">
-            <a href="movies">Login</a>
-        </div>
-    </div>
-    <!-- /.row -->
 @stop
