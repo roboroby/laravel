@@ -42,6 +42,7 @@ Editor::inst( $db, 'movies' )
                 ->table( 'ratings' )
                 ->value( 'id' )
                 ->label( 'name' )
+                ->order( 'id DESC' )
             ),
     Field::inst( 'ratings.name' )
 	)
