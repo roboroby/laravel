@@ -15,7 +15,7 @@ $sql_details = array(
 	"host" => "ec2-54-235-181-120.compute-1.amazonaws.com",       // Database host
 	"port" => "5432",       // Database connection port (can be left empty for default)
 	"db"   => "d83ene7l1pqeae",       // Database name
-	"dsn"  => "charset=utf8"        // PHP DSN extra information. Set as `charset=utf8` if you are using MySQL
+	"dsn"  => "charset=UTF8"        // PHP DSN extra information. Set as `charset=utf8` if you are using MySQL
 );
 
 
