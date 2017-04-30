@@ -42,10 +42,10 @@ $(document).ready(function() {
                         hours = Math.floor(data / 60);
 
                         if (hours > 0) {
-                            return hours + " " + pluralize('hour', hours, true) + " " + mins + " " + pluralize('minute', mins, true);
+                            return pluralize('hour', hours, true) + " " + pluralize('minute', mins, true);
                         }
                         else {
-                            return mins + " " + pluralize('minute', mins, true);
+                            return pluralize('minute', mins, true);
                         }
                     }
                     else {
