@@ -9,7 +9,7 @@ ini_set('display_errors', '1');
  * Database user / pass
  */
 $sql_details = array(
-	"type" => getenv('DB_TYPE'),  // Database type: "Mysql", "Postgres", "Sqlserver", "Sqlite" or "Oracle"
+	"type" => getenv('DB_Type'),  // Database type: "Mysql", "Postgres", "Sqlserver", "Sqlite" or "Oracle"
 	"user" => getenv('DB_UID'),       // Database user name
 	"pass" => getenv('DB_PWD'),       // Database password
 	"host" => getenv('DB_HOST'),       // Database host
