@@ -38,8 +38,8 @@ $(document).ready(function() {
             { data: "movies.length" ,
                 render: function ( data, type, row ) {
 
-                    hours = data % 60;
-                    mins = Math.floor(data/60);
+                    mins = data % 60;
+                    hours = Math.floor(data/60);
                     if(hours > 0)
                     {
                         return hours + " hours " + mins + " minutes";
