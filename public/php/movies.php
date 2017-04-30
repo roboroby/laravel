@@ -16,7 +16,20 @@ use
 Editor::inst( $db, 'movies' )
 	->field(
 	  Field::inst( 'movies.title' )->validator( 'Validate::notEmpty' ),
-	  Field::inst( 'movies.length' )->validator( 'Validate::notEmpty', array("message" => "Please enter a movie length")),
+	  /*Field::inst( 'movies.length' )->validator( 'Validate::notEmpty', array("message" => "Please enter a movie length")),*/
+	  Field::inst( 'movies.length' )->getFormatter( function ( $val, $data, $opts ) {
+            //return date( 'Y-m-d', strtotime( $val ) );
+            $mins = $val % 60;
+            $hours = floor($val/60);
+            if($hours > 0)
+            {
+                return "$hours hours $mins minutes";
+            }
+            else
+            {
+                return "$mins minutes";
+            }
+        }),
 	  Field::inst( 'movies.year' ),
 		Field::inst( 'movies.format_id' )
             ->options( Options::inst()
