@@ -24,7 +24,7 @@ $(document).ready(function() {
         }, {
             label: "Rating",
             name:  "movies.rating_id",
-            type:  "select"
+            type:  "radio"
         }
         ]
     } );
