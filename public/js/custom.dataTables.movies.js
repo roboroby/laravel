@@ -35,7 +35,11 @@ $(document).ready(function() {
         ajax: "./php/movies.php",
         columns: [
             { data: "movies.title" },
-            { data: "movies.length" },
+            { data: "movies.length" ,
+                render: function ( data, type, row ) {
+                    return 'Length '+ data;
+                }
+            },
             { data: "movies.year" },
             { data: "formats.name" },
             { data: "ratings.name" }
