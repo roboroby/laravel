@@ -37,17 +37,20 @@ $(document).ready(function() {
             { data: "movies.title" },
             { data: "movies.length" ,
                 render: function ( data, type, row ) {
+                    if ( type === 'display' || type === 'filter' ) {
+                        mins = data % 60;
+                        hours = Math.floor(data / 60);
+                        if (hours > 0) {
+                            return hours + " hours " + mins + " minutes";
+                        }
+                        else {
+                            return mins + " minutes";
+                        }
+                    }
+                    else {
+                        return data;
+                    }
 
-                    mins = data % 60;
-                    hours = Math.floor(data/60);
-                    if(hours > 0)
-                    {
-                        return hours + " hours " + mins + " minutes";
-                    }
-                    else
-                    {
-                        return mins + " minutes";
-                    }
                 }
             },
             { data: "movies.year" },
