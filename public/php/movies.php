@@ -15,24 +15,21 @@ use
 
 Editor::inst( $db, 'movies' )
 	->field(
-	  Field::inst( 'movies.title' )->validator( 'Validate::notEmpty' ),
-	  /*Field::inst( 'movies.length' )->validator( 'Validate::notEmpty', array("message" => "Please enter a movie length")),*/
-	  Field::inst( 'movies.length' )->getFormatter( function ( $val, $data, $opts ) {
-            /*
-            $mins = $val % 60;
-            $hours = floor($val/60);
-            if($hours > 0)
-            {
-                return "$hours hours $mins minutes";
-            }
-            else
-            {
-                return "$mins minutes";
-            }
-            */
-            return $val;
-        }),
-	  Field::inst( 'movies.year' ),
+	  Field::inst( 'movies.title' )->validator( 'Validate::notEmpty' )
+          ->validator( 'Validate::maxLen', 50 ),
+	  Field::inst( 'movies.length' )
+          ->validator( 'Validate::notEmpty', array("message" => "Please enter a movie length"))
+          ->validator( 'Validate::minMaxNum', array(
+              'min' => 1,
+              'max' => 499,
+              'message' => 'Please enter a number between 1 and 499'
+          ) ),
+	  Field::inst( 'movies.year' )
+          ->validator( 'Validate::minMaxNum', array(
+              'min' => 1801,
+              'max' => 2099,
+              'message' => 'Please enter a number between 1801 and 2099'
+          ) ),
 		Field::inst( 'movies.format_id' )
             ->options( Options::inst()
                 ->table( 'formats' )
